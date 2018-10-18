@@ -1,0 +1,38 @@
+<html>
+
+  <head>
+    <title>C+R Friends</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Friends</h1>
+      <table style="width:100%">
+        {% for y in friend %}
+        <tr>
+          {% for value in y.values() %}
+          <td> {{value}} </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+
+      <form action="/process" method="post">
+        <h1>Add A Friend</h1>
+        <div>
+          <label>First Name:</label>
+          <input type="text" name="first_name">
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" name="last_name">
+        </div>
+        <div>
+          <label>Occupation:</label>
+          <input type="text" name="occupation">
+        </div>
+        <input type="submit" value="Add Friend">
+      </form>
+    </div>
+  </body>
+
+</html>
